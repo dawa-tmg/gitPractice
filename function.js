@@ -28,14 +28,13 @@ function findRabbit(arr){
 }
 console.log(findRabbit(listOfAnimal))
 
-function hello(name) {
-  const gretting = "Hello, ";
-  if (name === undefined || name === ''){
-    return gretting + "World!"
-  }else{
-    const strArr = name.split('');
-    return gretting + strArr[0].toUpperCase() + name.slice(1,name.length).toLowerCase() + '!'
-
-  }
+function findAll(array, n) {
+    const indexOfN = [];
+    for(let i = 0; i < array.length; i++){
+        if(array[i] === n){
+            indexOfN.push(i)
+        }
+    }
+    return indexOfN
 }
-console.log(hello('string'))
+console.log(findAll([6, 9, 3, 4, 3, 82, 11], 3))
