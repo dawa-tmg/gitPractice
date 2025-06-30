@@ -27,3 +27,15 @@ function findRabbit(arr){
     }
 }
 console.log(findRabbit(listOfAnimal))
+
+function hello(name) {
+  const gretting = "Hello, ";
+  if (name === undefined || name === ''){
+    return gretting + "World!"
+  }else{
+    const strArr = name.split('');
+    return gretting + strArr[0].toUpperCase() + name.slice(1,name.length).toLowerCase() + '!'
+
+  }
+}
+console.log(hello('string'))
