@@ -1,40 +1,62 @@
-function reverse(str){
-    return str.split('').reverse().join('')
-}
-console.log(reverse('string'));
+// function reverse(str){
+//     return str.split('').reverse().join('')
+// }
+// console.log(reverse('string'));
 
-function replace(str, charToReplace, strReplacement){
-    return str.replace(charToReplace, strReplacement);
-}
-console.log(replace('spring', 'p', 't'))
+// function replace(str, charToReplace, strReplacement){
+//     return str.replace(charToReplace, strReplacement);
+// }
+// console.log(replace('spring', 'p', 't'))
 
-function strLengthEven(str){
-    if(str.length % 2 === 0){
-        return true;
-    }else{
-        return false;
-    }
-}
-console.log(strLengthEven('string'))
+// function strLengthEven(str){
+//     if(str.length % 2 === 0){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
+// console.log(strLengthEven('string'))
 
 
-const listOfAnimal = ['dog', 'cat', 'rabbit', 'cow']
-function findRabbit(arr){
-    for(let i = 0; i < arr.length; i++){
-        if(arr[i] === "rabbit"){
-            return arr.indexOf('rabbit');
+// const listOfAnimal = ['dog', 'cat', 'rabbit', 'cow']
+// function findRabbit(arr){
+//     for(let i = 0; i < arr.length; i++){
+//         if(arr[i] === "rabbit"){
+//             return arr.indexOf('rabbit');
+//         }
+//     }
+// }
+// console.log(findRabbit(listOfAnimal))
+
+// function findAll(array, n) {
+//     const indexOfN = [];
+//     for(let i = 0; i < array.length; i++){
+//         if(array[i] === n){
+//             indexOfN.push(i)
+//         }
+//     }
+//     return indexOfN
+// }
+// console.log(findAll([6, 9, 3, 4, 3, 82, 11], 3))
+
+function splitAndAdd(arr, n) {
+    for(let i = 0; i < n; i++){
+        const splitIndex = Math.floor(arr.length/2)
+        let splitOne = arr.slice(0, splitIndex)
+        let splitTwo = arr.slice(splitIndex)
+        const iteration = Math.max(splitOne.length, splitTwo.length)
+        
+        if (splitOne.length < splitTwo.length) {
+            splitOne = Array(splitTwo.length - splitOne.length).fill(0).concat(splitOne);
+        } else if (splitTwo.length < splitOne.length) {
+            splitTwo = Array(splitOne.length - splitTwo.length).fill(0).concat(splitTwo);
         }
-    }
-}
-console.log(findRabbit(listOfAnimal))
-
-function findAll(array, n) {
-    const indexOfN = [];
-    for(let i = 0; i < array.length; i++){
-        if(array[i] === n){
-            indexOfN.push(i)
+        const splitAdd = []
+        for(let i = 0; i < iteration; i++){
+            splitAdd.push(splitOne[i] + splitTwo[i])
         }
+         arr = splitAdd;
     }
-    return indexOfN
+    console.log(arr)
 }
-console.log(findAll([6, 9, 3, 4, 3, 82, 11], 3))
+splitAndAdd([1,2,3,4,5],2)
