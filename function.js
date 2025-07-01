@@ -135,4 +135,17 @@ function calculateTip(amount, rating) {
 }
 console.log(calculateTip(26.95, "good"))
 
+function validateHello(greetings) {
+  const grettingList = ['hello', 'ciao', 'salut', 'hallo', 'hola','ahoj','czesc']
+  let result = false;
+  grettingList.forEach((elem)=> {
+    if(greetings.toLowerCase().includes(elem)){
+      result = true;
+    }
+  })
+  return result;
+}
+console.log(validateHello('meh'))
+
+
 
