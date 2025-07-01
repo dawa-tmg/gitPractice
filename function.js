@@ -117,3 +117,22 @@ function integrate(coefficient, exponent) {
 }
 console.log(integrate(3,2))
 
+function calculateTip(amount, rating) {
+  
+  if (rating.toLowerCase() == "excellent"){
+    return Math.ceil(amount * (20/100));
+  }else if(rating.toLowerCase() == "great"){
+    return Math.ceil(amount * (15/100));
+  }else if(rating.toLowerCase() == "good"){
+    return Math.ceil(amount * (10/100));
+  }else if(rating.toLowerCase() == "poor"){
+    return Math.ceil(amount * (5/100));
+  }else if(rating.toLowerCase() == "terrible") {
+    return 0;
+  }else{
+    return "Rating not recognised";
+  }
+}
+console.log(calculateTip(26.95, "good"))
+
+
