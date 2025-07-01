@@ -112,4 +112,8 @@ function interlockable(a, b) {
   return true;
 }
 
+function integrate(coefficient, exponent) {
+  return `${(coefficient/(exponent+1))}X^${exponent +1}`
+}
+console.log(integrate(3,2))
 
