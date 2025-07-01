@@ -160,5 +160,19 @@ function neutralise(s1, s2) {
 }
 console.log(neutralise("--++--", "++--++"))
 
-
+function countPositivesSumNegatives(input) {
+  if(input === null || !input.length){
+    return [];
+  }
+  let result = [0, 0];
+  input.forEach((element)=>{
+    if(element > 0){
+      result[0] += 1 
+    }else{
+      result[1] += element
+    }
+  })
+  return result;
+}
+console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]))
 
