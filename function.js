@@ -1,43 +1,43 @@
-// function reverse(str){
-//     return str.split('').reverse().join('')
-// }
-// console.log(reverse('string'));
+function reverse(str){
+    return str.split('').reverse().join('')
+}
+console.log(reverse('string'));
 
-// function replace(str, charToReplace, strReplacement){
-//     return str.replace(charToReplace, strReplacement);
-// }
-// console.log(replace('spring', 'p', 't'))
+function replace(str, charToReplace, strReplacement){
+    return str.replace(charToReplace, strReplacement);
+}
+console.log(replace('spring', 'p', 't'))
 
-// function strLengthEven(str){
-//     if(str.length % 2 === 0){
-//         return true;
-//     }else{
-//         return false;
-//     }
-// }
-// console.log(strLengthEven('string'))
+function strLengthEven(str){
+    if(str.length % 2 === 0){
+        return true;
+    }else{
+        return false;
+    }
+}
+console.log(strLengthEven('string'))
 
 
-// const listOfAnimal = ['dog', 'cat', 'rabbit', 'cow']
-// function findRabbit(arr){
-//     for(let i = 0; i < arr.length; i++){
-//         if(arr[i] === "rabbit"){
-//             return arr.indexOf('rabbit');
-//         }
-//     }
-// }
-// console.log(findRabbit(listOfAnimal))
+const listOfAnimal = ['dog', 'cat', 'rabbit', 'cow']
+function findRabbit(arr){
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] === "rabbit"){
+            return arr.indexOf('rabbit');
+        }
+    }
+}
+console.log(findRabbit(listOfAnimal))
 
-// function findAll(array, n) {
-//     const indexOfN = [];
-//     for(let i = 0; i < array.length; i++){
-//         if(array[i] === n){
-//             indexOfN.push(i)
-//         }
-//     }
-//     return indexOfN
-// }
-// console.log(findAll([6, 9, 3, 4, 3, 82, 11], 3))
+function findAll(array, n) {
+    const indexOfN = [];
+    for(let i = 0; i < array.length; i++){
+        if(array[i] === n){
+            indexOfN.push(i)
+        }
+    }
+    return indexOfN
+}
+console.log(findAll([6, 9, 3, 4, 3, 82, 11], 3))
 
 function splitAndAdd(arr, n) {
     for(let i = 0; i < n; i++){
@@ -84,3 +84,8 @@ function isAValidMessage(message) {
     }
     return true;
 }
+
+function subtractTen(num){
+    return num -10
+}
+console.log(subtractTen(20))
