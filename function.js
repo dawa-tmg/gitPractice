@@ -98,3 +98,18 @@ function parseF(s) {
     return +number.toFixed(1);
 }
 console.log(parseF(true))
+
+function interlockable(a, b) {
+  const binaryA = a.toString(2).split('').reverse();
+  const binaryB = b.toString(2).split('').reverse();
+  const iteration = Math.max(binaryA.length, binaryB.length);
+  
+  for(let i = 0; i < iteration; i++){
+    if (binaryA[i] === '1' && binaryB[i]=== '1'){
+      return false;
+    }
+  }
+  return true;
+}
+
+
