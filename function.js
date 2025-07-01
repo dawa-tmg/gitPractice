@@ -60,3 +60,27 @@ function splitAndAdd(arr, n) {
     console.log(arr)
 }
 splitAndAdd([1,2,3,4,5],2)
+
+function isAValidMessage(message) {
+    if (message.length === 0) {
+        return true;
+    }
+
+    if (isNaN(message[0]) || !isNaN(message[message.length - 1])) {
+        return false;
+    }
+
+    const strings = message.split(/[0-9]+/).filter(elem => elem !== '');
+    const numbers = message.split(/[A-Za-z]+/).filter(elem => elem !== '').map(Number);
+
+    if (strings.length !== numbers.length) {
+        return false;
+    }
+
+    for (let i = 0; i < strings.length; i++) {
+        if (strings[i].length !== numbers[i]) {
+        return false;
+        }
+    }
+    return true;
+}
