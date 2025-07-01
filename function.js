@@ -89,3 +89,12 @@ function subtractTen(num){
     return num -10
 }
 console.log(subtractTen(20))
+
+function parseF(s) {
+     if (isNaN(s) || typeof s === 'boolean'){
+        return null;
+    }
+    const number = Number(s)
+    return +number.toFixed(1);
+}
+console.log(parseF(true))
