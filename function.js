@@ -180,3 +180,14 @@ function getASCII(c){
   return c.charCodeAt()
 }
 console.log(getASCII('A'))
+
+function removeEveryOther(arr){
+  const removedElement = []
+  for(let i = 0; i < arr.length; i ++){
+    if(i % 2 === 0){
+       removedElement.push(arr[i])
+    }
+  }
+  return removedElement;
+}
+console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']))
