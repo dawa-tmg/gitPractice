@@ -191,3 +191,16 @@ function removeEveryOther(arr){
   return removedElement;
 }
 console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']))
+
+let a = {'Mike':'aye','Joe':'aye','Johnson':'aye','Peter':'aye'};
+let b = {'Mike':'aye','Joe':'nay','Johnson':'aye','Peter':'aye'};
+
+const cannonsReady = (gunners) => {
+  for(const reply in gunners){
+    if (gunners[reply] === 'nay'){
+      return 'Shiver me timbers!';
+    }
+  }
+  return 'Fire!';
+}
+console.log(cannonsReady(a))
